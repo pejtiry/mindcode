@@ -334,17 +334,18 @@ var submit=new SubmitButton(reset.posX,reset.posY,actionCols[1],reset.bWidth,res
 void draw() { 
     var b;
     background(200, 100, 0);
-    if (endGame){
+//	drawCode();
+	drawColors();
+	showGuesses();
+    	printFunc();
+
+	if (endGame){
         drawCode();
         showResult();
         reset.draw(reset.name);
         reset.active=true;
         submit.active=false;
 	}
-//	drawCode();
-	drawColors();
-	showGuesses();
-    	printFunc();
     
     if (!endGame){
         drawGuess();
