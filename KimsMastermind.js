@@ -341,7 +341,7 @@ void draw() {
         reset.active=true;
         submit.active=false;
 	}
-	drawCode();
+//	drawCode();
 	drawColors();
 	showGuesses();
     	printFunc();
