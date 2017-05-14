@@ -239,12 +239,15 @@ var  mouseEvent = function(x,y){
                     endGame=true;
                     win=true;
                 }
+		    else{
+			currentGuess=[];
+		    }
                 //the reset button resets the game
                 guesses.push(new guessResult(currentGuess,result[0],result[1]));
                 resetGuess();
                 //if the max number of guesses is reached, the game is ended with a lose
                 if (guesses.length===maxSteps){endGame=true;}
-                currentGuess=[];
+                
             }
         }
     }
