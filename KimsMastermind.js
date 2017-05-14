@@ -236,6 +236,7 @@ var  mouseEvent = function(x,y){
                 var result=evaluate(code2guess,currentGuess);
                 guesses.push(new guessResult(currentGuess,result[0],result[1]));
                 resetGuess();
+		currentGuess=[];
 		    //if the code is guessed, the game ends with a win
                 if (result[0]===codeLength){
                     endGame=true;
