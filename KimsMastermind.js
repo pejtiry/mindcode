@@ -180,7 +180,6 @@ var evaluate = function(origCode,newCode){
             if (origC[i]===newC[k]){
 		    origC[i]=-1;
                 newC.splice([k], 1);
-//                origC.splice([k], 1);
                 isColor++;
             }
         }
@@ -215,15 +214,17 @@ var  mouseEvent = function(x,y){
     //handle what happens when a button is pushed
     var b;
     b = returnButton(x,y);
+	
     if (b[0].bType===bTypeReset){
-        guesses=[];
+        //the reset button resets the game
+	guesses=[];
         endGame=false;
 	code2guess = newCode();
-	    win=false;
+	win=false;
     }
     if (!endGame){
         if (b[0] instanceof Button){
-            if (b[0].bType===bTypeColor){
+		if (b[0].bType===bTypeColor){
                 numCol=b[1];
                 currentGuess[currentGuessPos] = numCol;
                 currentGuessPos++;
@@ -244,8 +245,6 @@ var  mouseEvent = function(x,y){
                     endGame=true;
                     win=true;
                 }
-
-                //the reset button resets the game
                 
                 //if the max number of guesses is reached, the game is ended with a lose
                 if (guesses.length===maxSteps){endGame=true;}
@@ -314,11 +313,11 @@ var showResult = function(){
 fill(24, 255, 255);
     if (win){
         textSize(30);
-        text(" You won in: " + guesses.length + " steps ", 10,340);
+        text(" You win in step: " + guesses.length, 10,340);
     }
     else{
         textSize(30);
-        text("You lose, no more guesses :(", 10,340);
+        text("Game over! You lose!", 10,340);
     }
 };
 
