@@ -340,7 +340,7 @@ void draw() {
         reset.active=true;
         submit.active=false;
 	}
-
+	drawCode();
 	drawColors();
 	showGuesses();
     	printFunc();
