@@ -178,7 +178,7 @@ var evaluate = function(origCode,newCode){
     for (var i= 0; i < origC.length; i++){
         for(var k = 0; k < newC.length; k++){
             if (origC[i]===newC[k]){
-		    orig[i]=-1;
+		    origC[i]=-1;
                 newC.splice([k], 1);
 //                origC.splice([k], 1);
                 isColor++;
