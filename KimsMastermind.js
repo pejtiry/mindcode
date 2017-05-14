@@ -219,6 +219,7 @@ var  mouseEvent = function(x,y){
         guesses=[];
         endGame=false;
 	code2guess = newCode();
+	    win=false;
     }
     if (!endGame){
         if (b[0] instanceof Button){
