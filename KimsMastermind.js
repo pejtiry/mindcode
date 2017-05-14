@@ -234,7 +234,9 @@ var  mouseEvent = function(x,y){
             else if (b[0].bType===bTypeSubmit){
                 fill(cWhite);
                 var result=evaluate(code2guess,currentGuess);
-                //if the code is guessed, the game ends with a win
+                guesses.push(new guessResult(currentGuess,result[0],result[1]));
+                resetGuess();
+		    //if the code is guessed, the game ends with a win
                 if (result[0]===codeLength){
                     endGame=true;
                     win=true;
@@ -243,8 +245,7 @@ var  mouseEvent = function(x,y){
 			currentGuess=[];
 		    }
                 //the reset button resets the game
-                guesses.push(new guessResult(currentGuess,result[0],result[1]));
-                resetGuess();
+                
                 //if the max number of guesses is reached, the game is ended with a lose
                 if (guesses.length===maxSteps){endGame=true;}
                 
