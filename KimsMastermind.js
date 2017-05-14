@@ -242,9 +242,7 @@ var  mouseEvent = function(x,y){
                     endGame=true;
                     win=true;
                 }
-		    else{
-			currentGuess=[];
-		    }
+
                 //the reset button resets the game
                 
                 //if the max number of guesses is reached, the game is ended with a lose
