@@ -129,7 +129,7 @@ var newCode = function() {
     var code = [];
     var tal;
     for (var i=0;i<codeLength;i++){
-    	tal=round(random(0.5,7.5));
+    	tal=round(random(-0.5,7.5));
     	if (tal===8){i--;}
     	else {code[i]=tal;}
     }
