@@ -218,6 +218,7 @@ var  mouseEvent = function(x,y){
     if (b[0].bType===bTypeReset){
         guesses=[];
         endGame=false;
+	newCode();
     }
     if (!endGame){
         if (b[0] instanceof Button){
