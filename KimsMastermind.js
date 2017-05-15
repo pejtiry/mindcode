@@ -157,7 +157,8 @@ var returnButton = function(x,y){
         for (var i = 0; i < buttons.length; i++){
         if (buttons[i].hit(x,y)){
             button=[buttons[i],i];
-            return button;}
+        }
+	return button;
     }
 };
 
@@ -214,7 +215,7 @@ var  mouseEvent = function(x,y){
     //handle what happens when a button is pushed
     var b;
     b = returnButton(x,y);
-	if (b ==== null){break};	
+		
     if (b[0].bType===bTypeReset){
         //the reset button resets the game
 	guesses=[];
