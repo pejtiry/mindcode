@@ -5,7 +5,7 @@
 
 // Make sure your code includes this line to setup a 400x400 pixel canvas
 void setup() { 
-  size(400, 400); 
+  size(400, 500); 
 } 
 var printText=[];
 var colHeight = 50;
