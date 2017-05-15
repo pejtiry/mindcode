@@ -2,10 +2,10 @@
 *   This code is based on a program I wrote on Khan Academy.
 *   It has been modified to work on your own site.
 ***********************************************************************************/
-
+var canvasWidth=400, canvasHeight=500;
 // Make sure your code includes this line to setup a 400x400 pixel canvas
 void setup() { 
-  size(400, 500); 
+  size(canvasX, canvasY); 
 } 
 var printText=[];
 var colHeight = 50;
@@ -105,9 +105,9 @@ var makeListColors = function(){
     var col, baseWidth, baseHeight, posY;
     var numCols = cols.length;
     var button;
-    baseWidth = 400/numCols;
+    baseWidth = canvasWidth/numCols;
     baseHeight=colHeight;
-    posY = 400 - baseWidth;
+    posY = canvasHeight - baseWidth;
     for (var i = 0; i < numCols; i++){
         col = cols[i];
         button=new ColorButton(i*baseWidth,posY,col,colHeight,colHeight);
