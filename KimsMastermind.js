@@ -107,7 +107,7 @@ var makeListColors = function(){
     var button;
     baseWidth = canvasWidth/numCols;
     baseHeight=colHeight;
-    posY = canvasHeight - baseWidth;
+    posY = canvasHeight - baseHeight;
     for (var i = 0; i < numCols; i++){
         col = cols[i];
         button=new ColorButton(i*baseWidth,posY,col,colHeight,colHeight);
