@@ -158,8 +158,8 @@ var returnButton = function(x,y){
         if (buttons[i].hit(x,y)){
             button=[buttons[i],i];
         }
-	return button;
     }
+	return button;
 };
 
 var evaluate = function(origCode,newCode){
