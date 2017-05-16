@@ -141,7 +141,7 @@ var drawCode = function(){
     var codeX,codeY;
     for (var i = 0; i < code2guess.length; i++){
         codeX = spacing + i*(guessWidth+spacing);
-        codeY = spacing;
+        codeY = startGuessPosY;
         fill(cols[code2guess[i]].rgb);
         rect(codeX,codeY,guessWidth,guessHeight);
     }
