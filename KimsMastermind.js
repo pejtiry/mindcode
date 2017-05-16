@@ -27,6 +27,7 @@ var resultShow=false;
 var currentGuessPos =  0;
 var startGuessPosX=spacing;
 var startGuessPosY=spacing+15;
+var lastGuessPosY=0;
 var guesses=[];
 var buttons=[];
 var guessButtons=[];
@@ -298,6 +299,7 @@ var showGuesses = function(){
 
     for (var i = 0; i < guesses.length; i++){
         guessY=startGuessPosY + (i+1)*(guessHeight + spacing);
+	    lastGuessPosY=guessY;
         for (var k = 0; k < code2guess.length; k++){
             try{
             fill(cols[guesses[i].guess[k]].rgb);
@@ -315,11 +317,11 @@ var showResult = function(){
 fill(24, 255, 255);
     if (win){
         textSize(30);
-        text(" You win in step: " + guesses.length, 10,340);
+        text(" You win in step: " + guesses.length, 10,lastGuessPosY + 20);
     }
     else{
         textSize(30);
-        text("Game over! You lose!", 10,340);
+        text("Game over! You lose!", 10,lastGuessPosY + 20);
     }
 };
 
