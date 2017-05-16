@@ -317,11 +317,11 @@ var showResult = function(){
 fill(24, 255, 255);
     if (win){
         textSize(30);
-        text(" You win in step: " + guesses.length, 10,lastGuessPosY + spacing + 20);
+        text(" You win in step: " + guesses.length, 10,lastGuessPosY + spacing + guessHeight + 20);
     }
     else{
         textSize(30);
-        text("Game over! You lose!", 10,lastGuessPosY + spacing + 20);
+        text("Game over! You lose!", 10,lastGuessPosY + spacing + guessHeight + 20);
     }
 };
 
