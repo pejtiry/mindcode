@@ -25,7 +25,7 @@ var cGray = color(200, 200, 200);
 var currentGuess = [];
 var resultShow=false;
 var currentGuessPos =  0;
-var startGuessPosX=spacing;
+var startGuessPosX=spacing + 100;
 var startGuessPosY=spacing+15;
 var lastGuessPosY=0;
 var guesses=[];
@@ -310,7 +310,7 @@ var showGuesses = function(){
         }
             fill(cWhite);
 //            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
-            try{text(guesses[i].spotOn + ",   " + guesses[i].spotted, 200, guessY+guessHeight);}catch(e){}
+            try{text(guesses[i].spotOn + ",   " + guesses[i].spotted, spacing, guessY+guessHeight);}catch(e){}
 
 }
 };
