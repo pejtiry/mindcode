@@ -14,7 +14,7 @@ var guessWidth = guessHeight;
 var codeLength=6;
 var code2guess = Array(codeLength);
 var win = false;
-var maxSteps=10;
+var maxSteps=2*codeLength;
 var endGame=false;
 var spacing = 10;
 var numCol;
