@@ -263,7 +263,7 @@ var  mouseEvent = function(x,y){
 var printFunc = function() {
         fill(240, 255, 203);
         textSize(30);
-        text("Kims Mastermind", 100,25);    
+        text("Kims Mastermind", spacing,25);    
     for (var i = 0; i < printText.length; i++){
         fill(cWhite);
         text(printText[i], 200,250+i*25);
@@ -341,7 +341,8 @@ makeListColors();
 initGuess();
 
 
-var reset=new ResetButton(400-4*guessWidth-spacing,(2*spacing) + guessHeight,actionCols[0],4*guessWidth,1.5*guessHeight);
+var reset=new ResetButton(400-4*guessWidth-spacing,(2*spacing),actionCols[0],4*guessWidth,1.5*guessHeight);
+//var reset=new ResetButton(400-4*guessWidth-spacing,(2*spacing) + guessHeight,actionCols[0],4*guessWidth,1.5*guessHeight);
 
 var submit=new SubmitButton(reset.posX,reset.posY,actionCols[1],reset.bWidth,reset.bHeight);
 
