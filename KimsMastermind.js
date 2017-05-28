@@ -310,7 +310,7 @@ var showGuesses = function(){
         }
             fill(cWhite);
 //            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
-            text(guesses[i].spotOn + ",   " + guesses[i].spotted, 200, guessY+guessHeight);
+            try{text(guesses[i].spotOn + ",   " + guesses[i].spotted, 200, guessY+guessHeight);}catch(e){}
 
 }
 };
