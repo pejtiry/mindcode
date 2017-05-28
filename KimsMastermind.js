@@ -260,7 +260,7 @@ var  mouseEvent = function(x,y){
 var printFunc = function() {
         fill(240, 255, 203);
         textSize(30);
-        text("Kims Mastermind", 120,25);    
+        text("Kims Mastermind", 100,25);    
     for (var i = 0; i < printText.length; i++){
         fill(cWhite);
         text(printText[i], 200,250+i*25);
@@ -309,8 +309,10 @@ var showGuesses = function(){
             rect(guessX,guessY,guessWidth,guessHeight);
         }
             fill(cWhite);
-            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
-    }
+//            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
+            text("guesses[i].spotOn + ",   " + guesses[i].spotted, 200, guessY+guessHeight);
+
+}
 };
 
 var showResult = function(){
