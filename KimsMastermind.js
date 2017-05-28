@@ -150,7 +150,8 @@ var drawCode = function(){
     }
     fill(0, 0, 0);
     strokeWeight(4);
-    line(0,guessHeight+startGuessPosY + 0.5*spacing,codeLength*(spacing+guessWidth)+spacing,guessHeight+startGuessPosY + 0.5*spacing);
+//    line(0,guessHeight+startGuessPosY + 0.5*spacing,codeLength*(spacing+guessWidth)+spacing,guessHeight+startGuessPosY + 0.5*spacing);
+    line(0,guessHeight+startGuessPosY + 0.5*spacing,canvasWidth,guessHeight+startGuessPosY + 0.5*spacing);
     strokeWeight(1);
 };
 
