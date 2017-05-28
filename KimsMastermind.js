@@ -143,7 +143,7 @@ var drawCode = function(){
     //draw code to guess
     var codeX,codeY;
     for (var i = 0; i < code2guess.length; i++){
-        codeX = spacing + i*(guessWidth+spacing);
+        codeX = startGuessPosX + i*(guessWidth+spacing);
         codeY = startGuessPosY;
         fill(cols[code2guess[i]].rgb);
         rect(codeX,codeY,guessWidth,guessHeight);
