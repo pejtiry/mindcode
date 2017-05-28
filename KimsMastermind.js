@@ -23,6 +23,7 @@ var cWhite = color(255,255,255);
 var cBlack = color(0, 0, 0);
 var cGray = color(200, 200, 200);
 var cRed = color(255,0,0);
+var cGreen = color(0,255,0);
 var currentGuess = [];
 var resultShow=false;
 var currentGuessPos =  0;
@@ -309,7 +310,7 @@ var showGuesses = function(){
             guessX = k*(guessWidth+spacing)+startGuessPosX;
             rect(guessX,guessY,guessWidth,guessHeight);
         }
-            fill(cRed);
+            fill(cGreen);
 //            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
             try{text(guesses[i].spotOn, spacing, guessY+guessHeight);}catch(e){}
 	    fill(cWhite);
