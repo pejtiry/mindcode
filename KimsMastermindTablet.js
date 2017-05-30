@@ -377,6 +377,12 @@ void draw() {
 //void mouseClicked() {
 //    mouseEvent(mouseX,mouseY);
 //};
-void mouseReleased() {
+//void mouseReleased() {
+//	mouseEvent(mouseX,mouseY);
+//};
+void touchend(e) {
 	mouseEvent(mouseX,mouseY);
+	for (var i = 0; i < e.changedTouches.lenth; i++){
+		mouseEvent(e.changedTouches[i].);
+	}
 };
