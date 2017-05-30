@@ -316,9 +316,9 @@ var showGuesses = function(){
 //            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
             try{text(guesses[i].spotOn, spacing, guessY+guessHeight);}catch(e){}
 	    fill(cWhite);
-	    try{text(",  " + guesses[i].spotted, spacing*2, guessY+guessHeight);}catch(e){}
+	    try{text(",  " + guesses[i].spotted, (spacing*2), guessY+guessHeight);}catch(e){}
 	    fill(cBlack);
-	    try{text("(" + (guesses[i].spotted+guesses[i].spotOn) +")", spacing*3, guessY+guessHeight);}catch(e){}
+	    try{text("(" + (guesses[i].spotted+guesses[i].spotOn) +")", (spacing*3), guessY+guessHeight);}catch(e){}
 
 }
 };
