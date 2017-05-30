@@ -380,9 +380,9 @@ void draw() {
 //void mouseReleased() {
 //	mouseEvent(mouseX,mouseY);
 //};
-void touchend(e) {
+void touchend(TouchEvent e) {
 //	mouseEvent(mouseX,mouseY);
 	for (var i = 0; i < e.changedTouches.lenth; i++){
 		mouseEvent(e.changedTouches[i].);
-	}
+	};
 };
