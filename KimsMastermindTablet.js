@@ -384,7 +384,7 @@ void touchend(TouchEvent e) {
 	var objE=e;
 	var tches=objE.changedTouches;
 //	mouseEvent(mouseX,mouseY);
-//	for (var i = 0; i < e.changedTouches.lenth; i++){
+	for (var i = 0; i < e.changedTouches.lenth; i++){
 //		mouseEvent(e.changedTouches[i].);
-	};
-//};
+	}
+};
