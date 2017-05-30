@@ -372,9 +372,9 @@ void draw() {
     }
 };
 
-void mouseClicked() {
-    mouseEvent(mouseX,mouseY);
+//void mouseClicked() {
+//    mouseEvent(mouseX,mouseY);
+//};
+void mouseReleased() {
+	mouseEvent(mouseX,mouseY);
 };
-    
-
-
