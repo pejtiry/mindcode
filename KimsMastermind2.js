@@ -317,6 +317,8 @@ var showGuesses = function(){
             try{text(guesses[i].spotOn, spacing, guessY+guessHeight);}catch(e){}
 	    fill(cWhite);
 	    try{text(",   " + guesses[i].spotted, spacing*2, guessY+guessHeight);}catch(e){}
+	    fill(cBlack);
+	    try{text(" (" + (guesses[i].spotted+guesses[i].spotOn) +")", spacing*2, guessY+guessHeight);}catch(e){}
 
 }
 };
