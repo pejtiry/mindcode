@@ -380,6 +380,6 @@ void mouseClicked() {
 	if (noDelay) {
 		noDelay = false;
 		mouseEvent(mouseX,mouseY);
-		setTimeout(delay, 500);
+		setTimeout(delay, 100);
 	}
 };
