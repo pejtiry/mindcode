@@ -342,6 +342,7 @@ ResetButton.prototype=Object.create(Button.prototype);
 SubmitButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
+println("printtest");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
 //var reset=new ResetButton(400-4*guessWidth-spacing,(2*spacing) + guessHeight,actionCols[0],4*guessWidth,1.5*guessHeight);
