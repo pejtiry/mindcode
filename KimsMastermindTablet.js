@@ -34,6 +34,7 @@ var lastGuessPosY=0;
 var guesses=[];
 var buttons=[];
 var guessButtons=[];
+var noDelay = true;
 
 var guessResult=function(guess, spotOn, spotted){
     this.guess=guess;
@@ -373,13 +374,18 @@ void draw() {
         submit.active=true;
     }
 };
-
-//void mouseClicked() {
-//    mouseEvent(mouseX,mouseY);
-//};
-void mouseReleased() {
-	mouseEvent(mouseX,mouseY);
+void delay() {
+	noDelay = true;
+}
+void mouseClicked() {
+	if (noDelay) {
+		noDelay = false;
+		mouseEvent(mouseX,mouseY);
+		setTimeout(delay, 1000);
+	}
 };
+//void mouseReleased() {
+//};
 void touchend(TouchEvent e) {
 	var objE=e;
 	var tches=objE.changedTouches;
