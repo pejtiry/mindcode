@@ -353,7 +353,6 @@ var submit=new SubmitButton(reset.posX,reset.posY,actionCols[1],reset.bWidth,res
 void draw() { 
     var b;
     background(200, 100, 0);
-//	drawCode();
 	drawColors();
 	showGuesses();
     	printFunc();
@@ -380,6 +379,6 @@ void mouseClicked() {
 	if (noDelay) {
 		noDelay = false;
 		mouseEvent(mouseX,mouseY);
-		setTimeout(delay, 100);
+		setTimeout(delay, 400);
 	}
 };
