@@ -342,7 +342,6 @@ ResetButton.prototype=Object.create(Button.prototype);
 SubmitButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
-println("test print");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
 //var reset=new ResetButton(400-4*guessWidth-spacing,(2*spacing) + guessHeight,actionCols[0],4*guessWidth,1.5*guessHeight);
@@ -383,6 +382,7 @@ void mouseReleased() {
 void touchend(TouchEvent e) {
 	var objE=e;
 	var tches=objE.changedTouches;
+	println(tches.length);
 //	mouseEvent(mouseX,mouseY);
 	for (var i = 0; i < e.changedTouches.lenth; i++){
 //		mouseEvent(e.changedTouches[i].);
