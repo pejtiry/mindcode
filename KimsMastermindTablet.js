@@ -383,5 +383,3 @@ void mouseClicked() {
 		setTimeout(delay, 500);
 	}
 };
-
-};
