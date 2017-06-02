@@ -375,7 +375,7 @@ void draw() {
 };
 void delay() {
 	noDelay = true;
-}
+};
 void mouseClicked() {
 	if (noDelay) {
 		noDelay = false;
