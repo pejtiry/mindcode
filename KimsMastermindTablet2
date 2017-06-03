@@ -159,7 +159,6 @@ var drawCode = function(){
     }
     fill(0, 0, 0);
     strokeWeight(4);
-//    line(0,guessHeight+startGuessPosY + 0.5*spacing,codeLength*(spacing+guessWidth)+spacing,guessHeight+startGuessPosY + 0.5*spacing);
     line(0,guessHeight+startGuessPosY + 0.5*spacing,canvasWidth,guessHeight+startGuessPosY + 0.5*spacing);
     strokeWeight(1);
 };
@@ -229,43 +228,43 @@ var  mouseEvent = function(x,y){
     var b;
     b = returnButton(x,y);
 	if (b!==null){
-    if (b[0].bType===bTypeReset){
-        //the reset button resets the game
-	guesses=[];
-        endGame=false;
-	code2guess = newCode();
-	win=false;
-    }
-    if (!endGame){
-        if (b[0] instanceof Button){
-		if (b[0].bType===bTypeColor){
-                numCol=b[1];
-                currentGuess[currentGuessPos] = numCol;
-                currentGuessPos++;
-                if (currentGuessPos === codeLength){currentGuessPos=0;}
-            }
-            if (b[0].bType===bTypeGuess){
-                currentGuessPos=b[0].name;
-            }
-            //code guess sent from user
-            else if (b[0].bType===bTypeSubmit){
-                fill(cWhite);
-                var result=evaluate(code2guess,currentGuess);
-                guesses.push(new guessResult(currentGuess,result[0],result[1]));
-                resetGuess();
-		currentGuess=[];
-		    //if the code is guessed, the game ends with a win
-                if (result[0]===codeLength){
-                    endGame=true;
-                    win=true;
-                }
+    		if (b[0].bType===bTypeReset){
+        	//the reset button resets the game
+			guesses=[];
+        		endGame=false;
+			code2guess = newCode();
+			win=false;
+    		}
+    		if (!endGame){
+        		if (b[0] instanceof Button){
+				if (b[0].bType===bTypeColor){
+                			numCol=b[1];
+                			currentGuess[currentGuessPos] = numCol;
+                			currentGuessPos++;
+                			if (currentGuessPos === codeLength){currentGuessPos=0;}
+            			}
+            			if (b[0].bType===bTypeGuess){
+                			currentGuessPos=b[0].name;
+            			}
+            			//code guess sent from user
+            			else if (b[0].bType===bTypeSubmit){
+                			fill(cWhite);
+                			var result=evaluate(code2guess,currentGuess);
+                			guesses.push(new guessResult(currentGuess,result[0],result[1]));
+                			resetGuess();
+					currentGuess=[];
+		    			//if the code is guessed, the game ends with a win
+                			if (result[0]===codeLength){
+                    				endGame=true;
+                    				win=true;
+                			}
                 
-                //if the max number of guesses is reached, the game is ended with a lose
-                if (guesses.length===maxSteps){endGame=true;}
+                			//if the max number of guesses is reached, the game is ended with a lose
+                			if (guesses.length===maxSteps){endGame=true;}
                 
-            }
-        }
-    }
+        			}
+        		}
+    		}
 	}
 };
 
@@ -273,10 +272,10 @@ var printFunc = function() {
         fill(240, 255, 203);
         textSize(30);
         text("Kims Mastermind", spacing,25);    
-    for (var i = 0; i < printText.length; i++){
-        fill(cWhite);
-        text(printText[i], 200,250+i*25);
-    }
+    	for (var i = 0; i < printText.length; i++){
+        	fill(cWhite);
+        	text(printText[i], 200,250+i*25);
+    	}
 };
 
 var drawGuess = function(){
@@ -309,26 +308,28 @@ var drawGuess = function(){
 var showGuesses = function(){
     var guessX, guessY;
 
-    for (var i = 0; i < guesses.length; i++){
-        guessY=startGuessPosY + (i+1)*(guessHeight + spacing);
-	    lastGuessPosY=guessY;
-        for (var k = 0; k < code2guess.length; k++){
-            try{
-            fill(cols[guesses[i].guess[k]].rgb);
-            }
-            catch(e){fill(cWhite);}
-            guessX = k*(guessWidth+spacing)+startGuessPosX;
-            rect(guessX,guessY,guessWidth,guessHeight);
-        }
-            fill(cGreen);
-//            try{text("guessed " + guesses[i].spotOn + ", colors  " + guesses[i].spotted, 150, guessY+guessHeight);}catch(e){}
-            try{text(guesses[i].spotOn, spacing, guessY+guessHeight);}catch(e){}
-	    fill(cWhite);
-	    try{text(", " + guesses[i].spotted, (spacing*2), guessY+guessHeight);}catch(e){}
-	    fill(cBlack);
-	    try{text(": (" + (guesses[i].spotted+guesses[i].spotOn) +")", (spacing*4), guessY+guessHeight);}catch(e){}
+	for (var i = 0; i < guesses.length; i++){
+    		guessY=startGuessPosY + (i+1)*(guessHeight + spacing);
+		lastGuessPosY=guessY;
+        	
+		for (var k = 0; k < code2guess.length; k++){
+			try{
+				fill(cols[guesses[i].guess[k]].rgb);
+			}
+		catch(e){fill(cWhite);}
+		
+		guessX = k*(guessWidth+spacing)+startGuessPosX;
+		rect(guessX,guessY,guessWidth,guessHeight);
+		}
+		
+		fill(cGreen);
+		try{text(guesses[i].spotOn, spacing, guessY+guessHeight);}catch(e){}
+		fill(cWhite);
+		try{text(", " + guesses[i].spotted, (spacing*2), guessY+guessHeight);}catch(e){}
+		fill(cBlack);
+		try{text(": (" + (guesses[i].spotted+guesses[i].spotOn) +")", (spacing*4), guessY+guessHeight);}catch(e){}
 
-}
+	}
 };
 
 var showResult = function(){
@@ -352,6 +353,7 @@ CodePlusButton.prototype=Object.create(Button.prototype);
 CodeMinusButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
+println("tablet2");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
 var codePlus=new CodePlusButton(reset.PosX-guessWidth-spacing,reset.posY,actionCols[0],guessWidth,reset.bHeight);
