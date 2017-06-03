@@ -40,7 +40,7 @@ var guessResult=function(guess, spotOn, spotted){
     this.spotOn=spotOn;
     this.spotted=spotted;
 };
-var bTypeColor=0,bTypeReset=1,bTypeSubmit=2,bTypeGuess=3;bTypeCodePlus=4;bTypeCodeMinus=5;
+var bTypeColor=0,bTypeReset=1,bTypeSubmit=2,bTypeGuess=3,bTypeCodePlus=4,bTypeCodeMinus=5;
 var actionCols = [{name:" Reset",rgb:color(200, 200, 200),contrast:cBlack},{name:" Check",rgb:color(200, 200, 200),contrast:cBlack},{name:" Guess",rgb:color(cWhite),contrast:cBlack},{name:" code+",rgb:color(200, 200, 200),contrast:cBlack},{name:" code-",rgb:color(200, 200, 200),contrast:cBlack}];
 var cols = [
         {name:"  Red",rgb:color(255, 0, 0), contrast:color(0,255,255)},
@@ -353,7 +353,7 @@ CodePlusButton.prototype=Object.create(Button.prototype);
 CodeMinusButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
-println("tablet2");
+println("tablet2" + " 1");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
 var codePlus=new CodePlusButton(reset.PosX-guessWidth-spacing,reset.posY,actionCols[0],guessWidth,reset.bHeight);
