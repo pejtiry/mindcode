@@ -356,10 +356,10 @@ CodePlusButton.prototype=Object.create(Button.prototype);
 CodeMinusButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
-println("tablet2" + " 6");
+println("tablet2" + " 7");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
-var codePlus=new CodePlusButton(200,reset.posY,actionCols[4],guessWidth,reset.bHeight);
+var codePlus=new CodePlusButton(200,reset.posY,actionCols[3],reset.bHeight,reset.bHeight);
 //var codePlus=new CodePlusButton(reset.PosX-guessWidth-spacing,reset.posY,actionCols[4],guessWidth,reset.bHeight);
 //var codeMinus=new CodeMinusButton(codePlus.posX-guessWidth-spacing,codePlus.posY,actionCols[5],guessWidth,reset.bHeight);
 var submit=new SubmitButton(reset.posX,reset.posY,actionCols[1],reset.bWidth,reset.bHeight);
