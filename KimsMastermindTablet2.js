@@ -108,7 +108,6 @@ var SubmitButton = function(x,y,col,bWidth,bHeight){
 
 var CodePlusButton = function(x,y,col,bWidth,bHeight){
     Button.call(this,x,y,col,bWidth,bHeight,bTypeCodePlus);
-	println("plus");
 };
 
 var CodeMinusButton = function(x,y,col,bWidth,bHeight){
