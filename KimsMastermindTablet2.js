@@ -3,10 +3,10 @@
 *   It has been modified to work on your own site.
 ***********************************************************************************/
 var canvasWidth=400, canvasHeight=500;
-// Make sure your code includes this line to setup a 400x400 pixel canvas
+// Make sure your code includes this line to setup a 400x500 pixel canvas
 void setup() { 
-  size(canvasWidth, canvasHeight); 
-} 
+  size(canvasWidth, canvasHeight);
+}
 var printText=[];
 var colHeight = 50;
 var guessHeight = round(colHeight/3);
@@ -34,6 +34,7 @@ var guesses=[];
 var buttons=[];
 var guessButtons=[];
 var noDelay = true;
+var gameOn = false;
 
 var guessResult=function(guess, spotOn, spotted){
     this.guess=guess;
@@ -355,13 +356,13 @@ CodePlusButton.prototype=Object.create(Button.prototype);
 CodeMinusButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
-println("tablet2" + " 5");
+println("tablet2" + " 6");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
+var codePlus=new CodePlusButton(200,reset.posY,actionCols[4],guessWidth,reset.bHeight);
 //var codePlus=new CodePlusButton(reset.PosX-guessWidth-spacing,reset.posY,actionCols[4],guessWidth,reset.bHeight);
-var codeMinus=new CodeMinusButton(codePlus.posX-guessWidth-spacing,codePlus.posY,actionCols[5],guessWidth,reset.bHeight);
+//var codeMinus=new CodeMinusButton(codePlus.posX-guessWidth-spacing,codePlus.posY,actionCols[5],guessWidth,reset.bHeight);
 var submit=new SubmitButton(reset.posX,reset.posY,actionCols[1],reset.bWidth,reset.bHeight);
-
 
 void draw() { 
     var b;
@@ -381,7 +382,8 @@ void draw() {
     if (!endGame){
         drawGuess();
         submit.draw(submit.name + " " + guesses.length);
-	codeMinus.draw(this.name);
+	codePlus.draw(this.name);
+	codePlus.active=true;
         reset.active=false;
         submit.active=true;
     }
