@@ -107,10 +107,12 @@ var SubmitButton = function(x,y,col,bWidth,bHeight){
 
 var CodePlusButton = function(x,y,col,bWidth,bHeight){
     Button.call(this,x,y,col,bWidth,bHeight,bTypeCodePlus);
+	println("plus");
 };
 
 var CodeMinusButton = function(x,y,col,bWidth,bHeight){
     Button.call(this,x,y,col,bWidth,bHeight,bTypeCodeMinus);
+	println("minus");
 };
 
 var makeListColors = function(){
@@ -353,7 +355,7 @@ CodePlusButton.prototype=Object.create(Button.prototype);
 CodeMinusButton.prototype=Object.create(Button.prototype);
 makeListColors();
 initGuess();
-println("tablet2" + " 2");
+println("tablet2" + " 3");
 
 var reset=new ResetButton(400-4*guessWidth-spacing,spacing,actionCols[0],4*guessWidth,1.5*guessHeight);
 var codePlus=new CodePlusButton(reset.PosX-guessWidth-spacing,reset.posY,actionCols[4],guessWidth,reset.bHeight);
