@@ -6,7 +6,8 @@
 var canvasWidth=400, canvasHeight=500;
 // Make sure your code includes this line to setup a 400x400 pixel canvas
 void setup() { 
-  size(canvasWidth, canvasHeight); 
+	fullScreen();
+  //size(canvasWidth, canvasHeight); 
 } 
 var printText=[];
 var colHeight = 50;
