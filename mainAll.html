@@ -5,7 +5,8 @@
         
 	<head>
     <body>
-	<canvas width="400" height="500" data-processing-sources="KimsMastermind2.js"></canvas>
+	<canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;>
 	    <script>
 	    /**********************************************************************************
 *   This code is based on a program I wrote on Khan Academy.
@@ -14,7 +15,8 @@
 var canvasWidth=400, canvasHeight=500;
 // Make sure your code includes this line to setup a 400x500 pixel canvas
 void setup() { 
-  size(canvasWidth, canvasHeight);
+  //size(canvasWidth, canvasHeight);
+	size(window.innerWidth, window.innerHeight);
 }
 var printText=[];
 var colHeight = 50;
